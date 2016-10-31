@@ -1,0 +1,62 @@
+.marketing {
+	margin: 0 0 0 0;
+}
+body {
+	background-image: url("../img/vader-blur.png");
+}
+
+h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #ededed;
+}
+
+.jumbotron {
+	width: auto;
+	margin: 8% 0 0 0;
+	background-color: rgba(53,53,53,0.4);
+	border-radius: 10px;
+}
+
+.col-lg-4 {
+	margin: 0 2.2% 0 2.2%;
+	width: 20%;
+}
+
+
+#text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #dbdbdb;
+	text-align: justify;
+}
+
+.img-circle {
+	margin: 0 0 0 15%;
+}
+
+/*Navbar's CSS*/
+
+.navbar {
+	background-color: rgba(53,53,53,0.4);
+	border-radius: 5px;
+	border-color: rgba(53,53,53,0.4);
+}
+
+#logo {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2.2em;
+	font-weight: 300;
+	font-style: italic;
+	color: white;
+	margin: 2% 0 0 7%;
+}
+
+.navbar-nav {
+	padding-left: 67%;
+}
+
+.fa {
+	color: #dbdbdb;
+}
