@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Teste</title>
+	<script>
+		function loadXMLDoc() {
+			var xmlhttp = new XMLHttpRequest();
+			var codigo = document.getElementById("cod").value;
+			var departamento = document.getElementById("dep").value;
+			xmlhttp.onreadystatechange=function() {
+				if (xmlhttp.readyState==4) {  //&& xmlhttp.status==200) {               
+					document.getElementById("secao").innerHTML = xmlhttp.responseText;
+				}
+			}
+            xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_cliente/0?_expand=yes", true);
+			xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+			var dataToSend = '_data={"dept_no":  "'+ codigo + '", "dept_name":  "' + departamento + '"}';
+
+			xmlhttp.send(dataToSend);
+		}
+	</script>
+</head>
+<body>
+	<form id="secao">
+		<h3>Código</h3>
+		<input type="text" name="Código" id="cod"><br />
+		<h3>Departamento</h3>
+		<input type="text" name="Departamento" id="dep"><br /><br />
+		<button type="button" onclick="loadXMLDoc()">Alterar</button>
+	</form>
+</body>
+</html>

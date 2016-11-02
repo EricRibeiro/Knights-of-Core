@@ -1,0 +1,37 @@
+.jumbotron {
+	width: 70%;
+	margin-top: 4%;
+	margin-left: 14%;
+}
+
+.form-group {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5em;
+	color: white;
+}
+
+#formulario {
+	margin-left: 52%;
+	/*border: solid 2px yellow;*/
+	width: 40%;
+}
+
+.img-rounded {
+	float: left;
+	margin-left: 9%;
+}
+
+.form-control {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 2%;
+}
+
+.btn {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.7em;
+	margin-top: 29px;
+}
+
+.confirmar {
+	margin-left: 52%;
+}
