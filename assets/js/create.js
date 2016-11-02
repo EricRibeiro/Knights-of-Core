@@ -10,7 +10,7 @@ function CriarPersonagem() {
 			document.getElementById("formulario").innerHTML = xmlhttp.responseText;
 		}
 	}
-    xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
+    	xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
 	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
 	var data = {
