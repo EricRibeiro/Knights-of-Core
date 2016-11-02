@@ -7,7 +7,7 @@ function loadXMLDoc() {
 					document.getElementById("secao").innerHTML = xmlhttp.responseText;
 				}
 			}
-            xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/departments", true);
+            xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem", true);
 			xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
 			var dataToSend = '_data={"dept_no":  "'+ codigo + '", "dept_name":  "' + departamento + '"}';
