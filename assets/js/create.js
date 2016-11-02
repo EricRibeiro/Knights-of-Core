@@ -13,7 +13,15 @@ function CriarPersonagem() {
             xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
 			xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-			var dataToSend = '_data={"nome":  "' + nome + '", "classe":  "' + classe + '", "role": "' + role + '", "especializacao": "' + especializacao +'", "item_level": "' + item_level + '"}';
+			var data = {
+				"nome": nome,
+				"classe": classe,
+				"role": role,
+				"especializacao": especializacao,
+				"item_level": item_level
+			}
+
+			var dataToSend = '_data=' + JSON.stringify(data);
 
 			xmlhttp.send(dataToSend);
 		}
