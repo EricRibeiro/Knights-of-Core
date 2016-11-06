@@ -1,5 +1,6 @@
 function CriarPersonagem() {
 	var xmlhttp = new XMLHttpRequest();
+	var id = document.getElementById("id").value;
 	var nome = document.getElementById("nome").value;
 	var classe = document.getElementById("classe").value;
 	var role = document.getElementById("role").value;
@@ -14,6 +15,7 @@ function CriarPersonagem() {
 	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
 	var data = {
+		"id": id,
 		"nome": nome,
 		"classe": classe,
 		"role": role,

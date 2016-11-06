@@ -36,7 +36,10 @@
     <div class="container marketing jumbotron">
     <img class="img-rounded" src="../img/teny.png" alt="Star Wars - The Old Republic 1" width="330" height="450">	
     	<div id="formulario" class="form-group container">
-    		<label for="name">Nome do Personagem:</label>
+    		<label for="id">ID:</label>
+        <input type="text" class="form-control" id="id">
+
+        <label for="name">Nome do Personagem:</label>
   			<input type="text" class="form-control" id="nome">
 
   			<label for="class">Classe do Personagem:</label>
