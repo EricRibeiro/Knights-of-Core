@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Open+Sans|Raleway:400,400i');
+
 .jumbotron {
 	width: 70%;
-	margin-top: 4%;
+	margin-top: 3%;
 	margin-left: 14%;
+}
+
+footer .jumbotron {
+	margin: 2.7% 0 0 0;
 }
 
 .form-group {
@@ -34,4 +40,11 @@
 
 .confirmar {
 	margin-left: 52%;
+}
+
+/*Footer's CSS*/
+
+footer > .jumbotron {
+	padding: 1% 0% 1% 2%;
+	width: auto;
 }
