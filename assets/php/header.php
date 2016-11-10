@@ -4,7 +4,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" id="logo">Knights of Core</a>
+        <a class="navbar-brand">Knights of Core</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav" id="buttons">

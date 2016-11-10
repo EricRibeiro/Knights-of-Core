@@ -29,36 +29,36 @@
       <!-- Three columns of text below the header -->
       <div class="row">
 
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-lg-3 col-xs-12">
           <figure>
-            <img class="img-circle" src="assets/img/header_1_crop.png" alt="Star Wars - The Old Republic 1" width="200" height="200">
+            <img class="img-circle hidden-xs" src="assets/img/header_1_crop.png" alt="Star Wars - The Old Republic 1" width="200" height="200">
           </figure>
           <h3>Registrar a Equipe</h3>
           <p id="text">Entre aqui para registrar os jogadores que vão participar da sua core e seus respectivos atributos.</p>
           <p><a class="btn btn-info" href="assets/php/create.php" role="button"> Criar &raquo;</a></p>
         </div>
      
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-lg-3 col-xs-12">
           <figure>
-            <img class="img-circle" src="assets/img/header_2_crop.png" alt="Star Wars - The Old Republic 2" width="200" height="200">
+            <img class="img-circle hidden-xs" src="assets/img/header_2_crop.png" alt="Star Wars - The Old Republic 2" width="200" height="200">
           </figure>
           <h3>Integrantes da Equipe</h3>
           <p id="text">Aqui você pode ver as informações dos participantes, como nível dos itens, classes, etc.</p>
-          <p><a class="btn btn-info" href="#" role="button"> Ler &raquo;</a></p>
+          <p><a class="btn btn-info" href="assets/php/read.php" role="button"> Ler &raquo;</a></p>
         </div>
 
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-lg-3 col-xs-12">
           <figure>
-            <img class="img-circle" src="assets/img/header_3_crop.png" alt="Star Wars - The Old Republic 3" width="200" height="200">
+            <img class="img-circle hidden-xs" src="assets/img/header_3_crop.png" alt="Star Wars - The Old Republic 3" width="200" height="200">
           </figure>
           <h3>Alterar os Dados</h3>
           <p id="text">Mantenha sempre o status da sua equipe atualizado entrando aqui e alterandos os dados.</p>
           <p><a class="btn btn-info" href="#" role="button"> Atualizar &raquo;</a></p>
         </div>
 
-        <div class="col-lg-3 col-sm-12">
+        <div class="col-lg-3 col-xs-12">
           <figure>
-            <img class="img-circle" src="assets/img/header_4_crop.png" alt="Star Wars - The Old Republic 4" width="200" height="200">
+            <img class="img-circle hidden-xs" src="assets/img/header_4_crop.png" alt="Star Wars - The Old Republic 4" width="200" height="200">
           </figure>
           <h3>Apagar os Jogadores</h3>
           <p id="text">Apague dados incorretos, jogadores que sairam da equipe ou entradas inválidas aqui.</p>
