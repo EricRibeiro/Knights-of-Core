@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Open+Sans|Raleway:400,400i');
+.btn {
+	float: right;
+ 	right: 5%;
+}
+
+.ajust {
+	width: 50%;
+	margin-top: 5%;
+	margin-left: 24%;
+}
+.coolTable {
+	width: 50%;
+	margin-top: 0.1%;
+	margin-left: 24%;
+
+}
+
+button.btn.btn-primary.cancelar {
+	margin-right: 10%;
+}
+
+img.img-circle {
+	margin: 2% 0 0 25%;
+}
+
+blockquote, blockquote > footer {
+	margin: 11% 5% 0 0;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+.sith {
+	color: #ff3333;
+	font-family: 'Open Sans', sans-serif;
+	/*margin-left: 15%;*/
+}
+
+.tableHeader{
+	color: deepskyblue;
+	font-family: 'Open Sans', sans-serif;
+}
+.botao{
+	margin-right: 43%;
+}
