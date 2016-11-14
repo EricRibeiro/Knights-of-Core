@@ -62,7 +62,7 @@
           </figure>
           <h3>Apagar os Jogadores</h3>
           <p id="text">Apague dados incorretos, jogadores que sairam da equipe ou entradas inválidas aqui.</p>
-          <p><a class="btn btn-info" href="#" role="button"> Apagar &raquo;</a></p>
+          <p><a class="btn btn-info" href="assets/php/delete.php" role="button"> Apagar &raquo;</a></p>
         </div>
   
       </div><!-- /.row -->

@@ -6,20 +6,6 @@ body > div.container.jumbotron{
 	background-color: rgba(53,53,53,0.5);
 }
 
-blockquote {
-	margin-bottom: 3.2%;
-}
-
-blockquote > p {
-	font-family: 'Open Sans', sans-serif;
-	color: white;
-}
-
-blockquote > footer {
-	font-family: 'Josefin Sans', sans-serif;
-	color: white;
-}
-
 .btn {
 	float: right;
  	right: 5%;

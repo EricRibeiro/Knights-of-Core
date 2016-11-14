@@ -18,21 +18,16 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Javascript's Links -->
-    <script src="../js/read.js"></script> 
+    <script src="../js/delete.js"></script> 
 </head>
 
-  <body onload="lerPersonagem()">
+  <body onload="showTable()">
     
     <!-- This include is responsible for the header  -->
     <?php include 'header.php'; ?>
     <div id="coreTable"></div><br />
     <div id="botao"></div><br /><br />
-    <div class="container-fluid">
-      <blockquote class="blockquote-reverse">   
-        <p>Seu core vale tudo? Ou vale nada?</p>
-        <footer>Ednaldo Pereira na famigerada <em>Revista Ednaldo Pereira</em></footer>
-    </blockquote>
-    </div>
+    <div class="container-fluid"></div>
 
     <!-- This include is responsible for the footer  -->
      <?php include 'footer.php'; ?>

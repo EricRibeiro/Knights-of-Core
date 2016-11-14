@@ -6,13 +6,16 @@ function CriarPersonagem() {
 	var especializacao = document.getElementById("especializacao").value;
 	var item_level = document.getElementById("item_level").value;
 	xmlhttp.onreadystatechange=function() {
-		if (xmlhttp.readyState==4) {              
-			document.getElementById("formulario").innerHTML = xmlhttp.responseText;
+		
+		if (xmlhttp.readyState == 4) { 
+			window.alert ("Dados adicionados com sucesso.");
+			history.go(-1);
 		}
+		
 	}
-    	xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
-	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
+	xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
+	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	var data = {
 		"nome": nome,
 		"classe": classe,
@@ -20,10 +23,6 @@ function CriarPersonagem() {
 		"especializacao": especializacao,
 		"item_level": item_level
 	}
-
 	var dataToSend = '_data=' + JSON.stringify(data);
-
 	xmlhttp.send(dataToSend);
-
-	history.go(-1);
 }
