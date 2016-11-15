@@ -30,7 +30,7 @@
     <div class="container-fluid"></div>
 
     <!-- This include is responsible for the footer  -->
-     <?php include 'footer.php'; ?>
+     
 
         <!-- jQuery's CDN -->
     <script
