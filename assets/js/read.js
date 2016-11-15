@@ -4,9 +4,9 @@
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				var a = JSON.parse (xmlhttp.responseText);
 				var num = a.restify.rows.length;
-				var str = "<table class='container table table-hover sith'> <thead class='tableHeader'> <th> ID </th> <th> Nome </th> <th> Classe </th> <th> Role </th> <th> Especialização </th> <th> Item level </th> </thead>";
+				var str = "<table class='container table table-hover sith'> <thead class='tableHeader'> <th> Nome </th> <th> Classe </th> <th> Role </th> <th> Especialização </th> <th> Item level </th> </thead>";
 				for (j = 0; j < num; j++) {
-					str = str + '<tbody>' +'<tr>' + '<td>' + a.restify.rows[j].values.id.value + '</td>' + '<td>' + a.restify.rows[j].values.nome.value + '</td>' + '<td>' + a.restify.rows[j].values.classe.value + '</td>' + '<td>' + a.restify.rows[j].values.role.value + '</td>' + '<td>' + a.restify.rows[j].values.especializacao.value + '</td>' + '<td>' + a.restify.rows[j].values.item_level.value + '</td>' + '</tr>' +'</tbody>' ;
+					str += '<tr>' + '<td>' + a.restify.rows[j].values.nome.value + '</td>' + '<td>' + a.restify.rows[j].values.classe.value + '</td>' + '<td>' + a.restify.rows[j].values.role.value + '</td>' + '<td>' + a.restify.rows[j].values.especializacao.value + '</td>' + '<td>' + a.restify.rows[j].values.item_level.value + '</td>' + '</tr>';
 				}
 				document.getElementById("coreTable").innerHTML = str;
 				troca_classe("coreTable","container coolTable jumbotron ");

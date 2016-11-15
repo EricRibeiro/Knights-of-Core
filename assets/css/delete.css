@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Open+Sans|Raleway:400,400i');
 
-body > div.container.jumbotron{
+body > div.container.jumbotron {
 	width: 60%;
 	margin: 3% 0 0 20%;
 	background-color: rgba(53,53,53,0.5);

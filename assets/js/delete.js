@@ -1,54 +1,60 @@
 var xmlhttp = new XMLHttpRequest();
-var bookId = [];
-var buttonId;
-// Function to delete the character
-function deleteChar(btnId) {
-	xmlhttp.onreadystatechange=function() {
-		if (xmlhttp.readyState==4 && xmlhttp.status==200) {              
-			window.alert("Entrada excluida!");
-			window.location.reload();
+var bookId = [];	
 
-		}
-	}
-    xmlhttp.open("DELETE", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/" + btnId, true);
-	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	xmlhttp.send();
-}
-		
-
-// Table's function 		
-function processarRequisicao() {
-	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-		var a = JSON.parse (xmlhttp.responseText);
-		var num = a.restify.rows.length;
-		var str = "<table id ='myTable' class='container table table-hover sith'> <thead class='tableHeader'> <th> ID </th> <th> Nome </th> <th> Classe </th> <th> Role </th> <th> Especialização </th> <th> Item level </th> </thead>";
-		for (i = 0; i < num; i++) {
-			bookId[i] = a.restify.rows[i].values.id.value;
-			str += '<tr>' + '<td>' + a.restify.rows[i].values.id.value + '</td>' + '<td>' + a.restify.rows[i].values.nome.value + '</td>' + '<td>' + a.restify.rows[i].values.classe.value + '</td>' + '<td>' + a.restify.rows[i].values.role.value + '</td>' + '<td>' + a.restify.rows[i].values.especializacao.value + '</td>' + '<td>' + a.restify.rows[i].values.item_level.value + '</td>' + '<td>' + '<button id="button" class="btn btn-primary" onclick="deleteChar(this.id)">Delete</button>' + '</td>' + '</tr>';
-		}
-		document.getElementById("coreTable").innerHTML = str;
-		troca_classe("coreTable","container coolTable jumbotron ");
-		cria_botao();
-		var idLength = bookId.length;
-		for (j = 0; j < idLength; j++) {
-			document.getElementsByTagName("button")[j].id = bookId[j];
-		}
-	}
-}
-
+// This one show the table
 function showTable() {			
 	xmlhttp.onreadystatechange = processarRequisicao;
 	xmlhttp.open("GET", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/?_expand=yes", true);
 	xmlhttp.send();
 }
 
-//Back's button function
-function cria_botao (){
+// Main function 		
+function processarRequisicao() {
+	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		var a = JSON.parse (xmlhttp.responseText);
+		var num = a.restify.rows.length;
+		var str = "<table id ='myTable' class='container table table-hover table-condensed sith'> <thead class='tableHeader'> <th> ID </th> <th> Nome </th> <th> Classe </th> <th> Role </th> <th> Especialização </th> <th> Item level </th> <th></th> </thead>";
+		for (i = 0; i < num; i++) {
+			bookId[i] = a.restify.rows[i].values.id.value;
+			str += '<tr>' + '<td>' + a.restify.rows[i].values.id.value + '</td>' + '<td>' + a.restify.rows[i].values.nome.value + '</td>' + '<td>' + a.restify.rows[i].values.classe.value + '</td>' + '<td>' + a.restify.rows[i].values.role.value + '</td>' + '<td>' + a.restify.rows[i].values.especializacao.value + '</td>' + '<td>' + a.restify.rows[i].values.item_level.value + '</td>' + '<td>' + '<button id="button" class="btn btn-sm btn-primary" onclick="deleteChar(this.id)">Delete</button>' + '</td>' + '</tr>';
+		}
+		document.getElementById("coreTable").innerHTML = str;
+		changeClass("coreTable","container coolTable jumbotron ");
+		createButton();
+		changeId();	
+	}
+}
+
+// Function to delete the character
+function deleteChar(buttonId) {
+	xmlhttp.onreadystatechange=function() {
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) {              
+			window.alert("Entrada excluida!");
+			showTable();
+		}
+	}
+    xmlhttp.open("DELETE", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/" + buttonId, true);
+	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xmlhttp.send();
+}
+
+
+// Change the classes of the buttons to make the transition smoother
+function changeClass (x,y) {
+	document.getElementById(x).className = y;
+}
+
+// Back's button function
+function createButton () {
 	var a = '<button type="button" class="btn btn-primary cancelar" onclick="history.go(-1);">Voltar</button>';
 	document.getElementById("botao").innerHTML= a;
-	troca_classe("botao","botao");	
+	changeClass("botao","botao");	
 }
 	
-function troca_classe (x,y){
-	document.getElementById(x).className = y;
+// Change the ID of the buttons
+function changeId () {
+	var idLength = bookId.length;
+	for (j = 0; j < idLength; j++) {
+		document.getElementsByTagName("button")[j].id = bookId[j];
+	}
 }
