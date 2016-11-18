@@ -53,7 +53,7 @@
           </figure>
           <h3>Alterar os Dados</h3>
           <p id="text">Mantenha sempre o status da sua equipe atualizado entrando aqui e alterandos os dados.</p>
-          <p><a class="btn btn-info" href="#" role="button"> Atualizar &raquo;</a></p>
+          <p><a class="btn btn-info" href="assets/php/update.php" role="button"> Atualizar &raquo;</a></p>
         </div>
 
         <div class="col-lg-3 col-xs-12">

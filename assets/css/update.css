@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Open+Sans|Raleway:400,400i');
+
+body > div.container.jumbotron {
+	width: 60%;
+	margin: 3% 0 0 20%;
+	background-color: rgba(53,53,53,0.5);
+}
+
+.btn {
+	float: right;
+ 	right: 5%;
+}
+
+.coolTable {
+	width: 50%;
+	margin-top: 0.1%;
+	margin-left: 24%;
+
+}
+
+.sith {
+	color: #ff3333;
+	font-family: 'Raleway', sans-serif;
+	
+}
+
+.tableHeader {
+	color: #87cefa;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.3em;
+}
+
+.botao {
+	margin: 0 48% 0 0;
+}

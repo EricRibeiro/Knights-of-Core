@@ -5,7 +5,7 @@
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Core">
-    <meta name="author" content="Dupla de Três">
+    <meta name="author" content="Trio de Quatro">
     <link rel="icon" href="">
   	
     <!-- Page's title -->
