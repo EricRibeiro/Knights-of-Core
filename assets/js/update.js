@@ -1,5 +1,6 @@
 var xmlhttp = new XMLHttpRequest();
-var bookId = [];	
+var bookId = [];
+var id;
 // This one show the table
 function showTable() {			
 	xmlhttp.onreadystatechange = processarRequisicao;
@@ -24,47 +25,61 @@ function processarRequisicao() {
 	}
 }
 
-// Function to delete the character
+// Function to get the informartion of the row
 function getRow(rowId) {
 	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 		var userSession = JSON.parse (xmlhttp.responseText);
 		var userInfo = userSession.restify.rows[rowId];
-		updateChar(userInfo)
+		autoFill(userInfo)
 	}
 	xmlhttp.open("GET", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/?_expand=yes", true);
 	xmlhttp.send();
 }
 
-function updateChar(userInfo){
-		
+// Function to fill the forms with the row information
+function autoFill(userInfo){
+	
 	  document.getElementById("charName").value = userInfo.values.nome.value;
+	  document.getElementById("charClass").value = userInfo.values.classe.value;
+	  document.getElementById("charRole").value = userInfo.values.role.value;
+	  document.getElementById("charSpec").value = userInfo.values.especializacao.value;
+	  document.getElementById("charilvl").value = userInfo.values.item_level.value;
+	  id = userInfo.values.id.value;
 	  console.log(userInfo.values.nome.value)
+}
+
+function updateChar(){ 
+	var nome = document.getElementById("charName").value;
+	var classe = document.getElementById("charClass").value;
+	var role = document.getElementById("charRole").value;
+	var especializacao = document.getElementById("charSpec").value;
+	var item_level = document.getElementById("charilvl").value;
 
 
 
+	xmlhttp.open("PUT", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/" + id, true);
+	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	var data = {
+		"nome": nome,
+		"classe": classe,
+		"role": role,
+		"especializacao": especializacao,
+		"item_level": item_level
+	}
+	var dataToSend = '_data=' + JSON.stringify(data);
+	xmlhttp.send(dataToSend);
 
-	// var nome = document.getElementById("nome").value;
-	// var classe = document.getElementById("classe").value;
-	// var role = document.getElementById("role").value;
-	// var especializacao = document.getElementById("especializacao").value;
-	// var item_level = document.getElementById("item_level").value;
+   xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+            window.alert("Entrada atualizada!");
+			showTable();
+        }	
+    }
+}
 
-
-
-	// xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/0?_expand=yes", true);
-	// xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	// var data = {
-	// 	"nome": nome,
-	// 	"classe": classe,
-	// 	"role": role,
-	// 	"especializacao": especializacao,
-	// 	"item_level": item_level
-	// }
-	// var dataToSend = '_data=' + JSON.stringify(data);
-	// xmlhttp.send(dataToSend);
-
-
-
+// Delete the Form Text
+function delText(str){
+	 document.getElementById(str).value= "";
 }
 
 // Change the classes of the buttons to make the transition smoother

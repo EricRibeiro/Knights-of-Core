@@ -46,28 +46,28 @@
         <form>
           <div class="form-group">
             <label for="name">Nome do Personagem:</label>
-            <input type="text" class="form-control" id="charName">
+            <input type="text" class="form-control" id="charName" onClick = "delText(this.id);">
           </div>
           <div class="form-group">
             <label for="class">Classe:</label>
-            <input type="text" class="form-control" id="charClass">
+            <input type="text" class="form-control" id="charClass" onClick = "delText(this.id);">
           </div>
           <div class="form-group">
             <label for="role">Role do Personagem:</label>
-            <input type="text" class="form-control" id="charRole">
+            <input type="text" class="form-control" id="charRole" onClick = "delText(this.id);">
           </div>
           <div class="form-group">
             <label for="spec">Especialização do Personagem:</label>
-            <input type="text" class="form-control" id="charSpec">
+            <input type="text" class="form-control" id="charSpec" onClick = "delText(this.id);">
           </div>
           <div class="form-group">
             <label for="itemlvl">Nível dos Itens:</label>
-            <input type="text" class="form-control" id="charilvl">
+            <input type="text" class="form-control" id="charilvl" onClick = "delText(this.id);">
           </div>
         </form>
       </div>
       <div class="modal-footer ">
-        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Atualizar</button>
+        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" onclick = "updateChar()" >Atualizar</button>
       </div>
     </div>
 
