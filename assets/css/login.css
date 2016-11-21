@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i|Open+Sans|Raleway:400,400i');
+
+body > div.container.jumbotron {
+	width: 70%;
+	margin-top: 3%;
+	margin-left: 14%;
+}
+
+footer .jumbotron {
+	margin: 2.7% 0 0 0;
+}
+
+.form-group {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5em;
+	color: white;
+}
+
+#formulario {
+	margin-left: 30%;
+	width: 30%;
+}
+
+.img-rounded {
+	float: left;
+	margin-left: 9%;
+}
+
+.form-control {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 2%;
+}
+
+.btn {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.7em;
+	margin-top: 29px;
+}
+
+.confirmar {
+	margin-left: 52%;
+}
+
+/*Footer's CSS*/
+
+footer > .jumbotron {
+	padding: 1% 0% 1% 2%;
+	width: auto;
+}
