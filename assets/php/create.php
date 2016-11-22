@@ -9,7 +9,7 @@
     <link rel="icon" href="">
   	
     <!-- Page's title -->
-    <title>Core</title>
+    <title>Cidônya</title>
 
   	<!-- CSS's Links -->
       <link href="../css/bootstrap.min.css" rel="stylesheet">

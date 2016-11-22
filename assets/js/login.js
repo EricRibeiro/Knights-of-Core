@@ -9,7 +9,7 @@ var xmlhttp = new XMLHttpRequest();
 				for (j = 0; j < num; j++) {
 					if(login == a.restify.rows[j].values.login.value && senha == a.restify.rows[j].values.senha.value){
 						alert("Login feito com sucesso!");
-						location.href = "../../index.php"
+						location.href = "assets/php/menu.php"
 					}
 					else{
 						alert("Login inválido! tente novamente!");
