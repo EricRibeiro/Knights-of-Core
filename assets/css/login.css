@@ -2,8 +2,28 @@
 
 body > div.container.jumbotron {
 	width: 70%;
-	margin-top: 3%;
+	margin-top: 10%;
 	margin-left: 14%;
+
+	text-align:center;
+	display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 
 footer .jumbotron {
@@ -38,7 +58,8 @@ footer .jumbotron {
 }
 
 .confirmar {
-	margin-left: 52%;
+	text-align: center;
+	/*margin-left: 52%;*/
 }
 
 /*Footer's CSS*/

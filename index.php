@@ -27,16 +27,17 @@
     
     <!-- Wrap the rest of the page in a container to center all the content. -->
     <div class="container jumbotron">
-      <div id="formulario" class="form-group container">
-    	  <label for="name">Login</label>
-  			<input type="text" class="form-control" id="login" placeholder="Usuário">
-
-  			<label for="class">Senha</label>
-  			<input type="password" class="form-control" id="pw" placeholder="Senha">
-
-  			<button type="button" class="btn btn-primary confirmar" onclick="validator()">Entrar</button>
-
-  		</div>
+      <div class="row row-centered">
+        <div class="col-lg-6 col-centered">
+          <div id="formulario" class="form-group container">
+           <label for="name">Login</label>
+  		     <input type="text" class="form-control" id="login" placeholder="Usuário">
+  		     <label for="class">Senha</label>
+  		     <input type="password" class="form-control" id="pw" placeholder="Senha">
+  		     <button type="button" class="btn btn-primary confirmar" onclick="validator()">Entrar</button>
+          </div>
+        </div> 
+      </div>
     </div> <!-- /.container -->
   <?php include 'assets/php/footer.php'; ?>
   </body>
